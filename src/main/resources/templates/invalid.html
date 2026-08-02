@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Certificate Not Found | Skryptee</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="page">
+
+    <div class="verify-card">
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <div class="brand">
+
+                <img
+                        th:src="@{/images/logo.png}"
+                        src="/images/logo.png"
+                        alt="Skryptee Logo"
+                        class="logo">
+
+                <div>
+
+                    <h2>SKRYPTEE</h2>
+
+                    <p>Digital Certificate Registry</p>
+
+                </div>
+
+            </div>
+
+            <div class="invalid-pill">
+
+                INVALID
+
+            </div>
+
+        </div>
+
+        <!-- HERO -->
+
+        <div class="hero">
+
+            <div class="invalid-circle">
+
+                ✕
+
+            </div>
+
+            <div class="invalid-text">
+
+                VERIFICATION FAILED
+
+            </div>
+
+            <h1>
+
+                Certificate Not Found
+
+            </h1>
+
+            <p>
+
+                We could not find a certificate matching the supplied
+                identifier in the official Skryptee Digital Certificate Registry.
+
+            </p>
+
+        </div>
+
+        <!-- MESSAGE -->
+
+        <div class="invalid-box">
+
+            <h3>
+
+                Possible Reasons
+
+            </h3>
+
+            <ul>
+
+                <li>Certificate ID is incorrect.</li>
+
+                <li>QR Code has been modified.</li>
+
+                <li>Certificate has not been issued.</li>
+
+                <li>The credential may have been revoked.</li>
+
+            </ul>
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+
+            <div>
+
+                Skryptee Digital Certificate Registry
+
+            </div>
+
+            <div>
+
+                © 2026 Skryptee Innovations
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,733 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#2563eb;
+    --success:#16a34a;
+    --success-light:#ecfdf5;
+    --text:#111827;
+    --secondary:#6b7280;
+    --border:#e5e7eb;
+    --background:#f4f7fb;
+    --card:#ffffff;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--background);
+    color:var(--text);
+    overflow-x:hidden;
+
+}
+
+.background{
+
+    position:fixed;
+    inset:0;
+    z-index:-2;
+
+    background:
+            radial-gradient(circle at top left,#dbeafe 0%,transparent 28%),
+            radial-gradient(circle at bottom right,#dcfce7 0%,transparent 30%),
+            linear-gradient(180deg,#f7f9fc 0%,#eef3f8 100%);
+
+}
+
+.page{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:70px 30px;
+
+}
+
+.verify-card{
+
+    width:100%;
+    max-width:1100px;
+
+    background:var(--card);
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(0,0,0,.05);
+
+    box-shadow:
+            0 30px 70px rgba(15,23,42,.10);
+
+    animation:fade .45s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ================= HEADER ================= */
+
+.header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:34px 50px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.brand{
+
+    display:flex;
+    align-items:center;
+    gap:24px;
+
+}
+
+.logo{
+
+    width:70px;
+    height:auto;
+    object-fit:contain;
+
+}
+
+.brand h2{
+
+    font-size:36px;
+    letter-spacing:2px;
+    font-weight:700;
+    color:var(--text);
+
+}
+
+.brand p{
+
+    margin-top:6px;
+
+    color:var(--secondary);
+
+    font-size:15px;
+
+}
+
+.status-pill{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 28px;
+
+    border-radius:999px;
+
+    background:var(--success-light);
+
+    border:1px solid #bbf7d0;
+
+    color:var(--success);
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+.status-dot{
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#22c55e;
+
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+    text-align:center;
+
+    padding:55px 60px;
+
+    background:#fafbfd;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.verify-circle{
+
+    width:90px;
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:var(--success);
+
+    color:white;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    margin-bottom:28px;
+
+    box-shadow:
+            0 20px 45px rgba(22,163,74,.30);
+
+}
+
+.verified-text{
+
+    color:var(--success);
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    margin-bottom:12px;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.hero p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+    color:var(--secondary);
+
+    font-size:17px;
+
+}
+
+/* ================= DETAILS ================= */
+
+.section-title{
+
+    padding:40px 50px 10px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+.details{
+
+    padding:10px 50px 20px;
+
+}
+
+.detail-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 0;
+
+    border-bottom:1px solid #eef2f7;
+
+}
+
+.detail-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.label{
+
+    color:var(--secondary);
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+.value{
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+    text-align:right;
+
+    max-width:55%;
+
+}
+
+/* ================= CERTIFICATE ================= */
+
+.certificate-box{
+
+    margin:35px 50px;
+
+    padding:28px;
+
+    background:#f8fafc;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+}
+
+.certificate-title{
+
+    color:var(--secondary);
+
+    margin-bottom:16px;
+
+    font-size:14px;
+
+}
+
+.certificate-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.certificate-id{
+
+    color:var(--primary);
+
+    font-size:26px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    word-break:break-word;
+
+}
+
+.copy-btn{
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.copy-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 20px rgba(37,99,235,.25);
+
+}
+
+/* ================= TRUST ================= */
+
+.trust-box{
+
+    margin:0 50px 40px;
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:flex-start;
+
+    background:#f0fdf4;
+
+    border:1px solid #bbf7d0;
+
+    border-radius:18px;
+
+    padding:25px;
+
+}
+
+.trust-icon{
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    background:var(--success);
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:30px;
+
+    flex-shrink:0;
+
+}
+
+.trust-box h3{
+
+    color:#166534;
+
+    margin-bottom:8px;
+
+    font-size:22px;
+
+}
+
+.trust-box p{
+
+    color:#4b5563;
+
+    line-height:1.8;
+
+}
+
+.verification-status{
+
+    margin-top:15px;
+
+    display:inline-block;
+
+    background:white;
+
+    border:1px solid #bbf7d0;
+
+    border-radius:8px;
+
+    padding:10px 16px;
+
+    color:#166534;
+
+    font-size:14px;
+
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:30px 50px;
+
+    border-top:1px solid var(--border);
+
+    background:#fafafa;
+
+    color:var(--secondary);
+
+    font-size:14px;
+
+}
+
+.footer strong{
+
+    color:var(--text);
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .page{
+
+        padding:25px;
+
+    }
+
+    .header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:25px;
+
+        padding:30px;
+
+    }
+
+    .brand{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .logo{
+
+        width:90px;
+
+    }
+
+    .hero{
+
+        padding:45px 25px;
+
+    }
+
+    .hero h1{
+
+        font-size:30px;
+
+    }
+
+    .section-title{
+
+        padding:35px 25px 10px;
+
+    }
+
+    .details{
+
+        padding:0 25px;
+
+    }
+
+    .detail-row{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+    }
+
+    .value{
+
+        max-width:100%;
+
+        text-align:left;
+
+    }
+
+    .certificate-box{
+
+        margin:25px;
+
+    }
+
+    .certificate-row{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+    .trust-box{
+
+        margin:0 25px 25px;
+
+        flex-direction:column;
+
+    }
+
+    .footer{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:12px;
+
+        padding:25px;
+
+    }
+
+}
+/* ================= INVALID PAGE ================= */
+
+.invalid-pill{
+
+    padding:14px 28px;
+
+    border-radius:999px;
+
+    background:#fef2f2;
+
+    border:1px solid #fecaca;
+
+    color:#dc2626;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+.invalid-circle{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#dc2626;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    margin-bottom:28px;
+
+    box-shadow:0 20px 45px rgba(220,38,38,.25);
+
+}
+
+.invalid-text{
+
+    color:#dc2626;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    margin-bottom:12px;
+
+}
+
+.invalid-box{
+
+    margin:40px 50px;
+
+    background:#fff7f7;
+
+    border:1px solid #fecaca;
+
+    border-radius:18px;
+
+    padding:30px;
+
+}
+
+.invalid-box h3{
+
+    color:#b91c1c;
+
+    margin-bottom:18px;
+
+    font-size:22px;
+
+}
+
+.invalid-box ul{
+
+    padding-left:20px;
+
+}
+
+.invalid-box li{
+
+    margin-bottom:12px;
+
+    color:#4b5563;
+
+    line-height:1.8;
+
+}
