@@ -15,6 +15,7 @@ public class CsvReader {
 
         try (CSVReader reader = new CSVReader(new FileReader(path))) {
 
+            // Skip header
             reader.readNext();
 
             String[] row;
@@ -23,20 +24,18 @@ public class CsvReader {
 
                 CertificateCsvRow dto = new CertificateCsvRow();
 
-                dto.setStudentName(row[0]);
-                dto.setRegisterNumber(row[1]);
-                dto.setCollege(row[2]);
-                dto.setCourse(row[3]);
-                dto.setScore(Integer.parseInt(row[4]));
-                dto.setIssueDate(row[5]);
-                dto.setCertificateId(row[6]);
-                dto.setStatus(row[7]);
+                dto.setCertificateId(row[0].trim());
+                dto.setStudentName(row[1].trim());
+                dto.setCollege(row[2].trim());
+                dto.setCourse(row[3].trim());
+                dto.setIssueDate(row[4].trim());
+                dto.setStatus(row[5].trim());
 
                 list.add(dto);
             }
 
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Failed to read CSV file", e);
         }
 
         return list;

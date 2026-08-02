@@ -1,10 +1,4 @@
-student_name,register_number,college,course,score,issue_date,certificate_id,status
-Baranidharan J,11142301CS04001,Prathyusha Engineering College,SAP Industry Supported Course,94,01-08-2026,SKRPISC62704001,VERIFIED
-Yalavarthi Haindavi,11142301CS04002,Madanaopalle Institute of Technology and Science,Machine Learning,92,01-08-2026,SKRPISC62704002,VERIFIED
-Arun Kumar,11142301CS04003,Prathyusha Engineering College,SAP Industry Supported Course,90,01-08-2026,SKRPISC62704003,VERIFIED
-Priya S,11142301CS04004,Prathyusha Engineering College,SAP Industry Supported Course,96,01-08-2026,SKRPISC62704004,VERIFIED
-Rahul V,11142301CS04005,Prathyusha Engineering College,SAP Industry Supported Course,88,01-08-2026,SKRPISC62704005,VERIFIED
-Mani,534864846,Prathyusha Engineering College,SAP Industry Supported Course,55,01-08-2026,SKRPISC62704006,VERIFIED
-Kavya,864468484,Prathyusha Engineering College,SAP Industry Supported Course,88,01-08-2026,SKRPISC62704007,VERIFIED
-latha,6.87E+11,Prathyusha Engineering College,SAP Industry Supported Course,88,01-08-2026,SKRPISC62704008,VERIFIED
-Yalavarthi Haindavi,11142301CS04006,Madanapalle Institute of Technology and Science,,90,14-Aug-26,SKRP20260730002,VERIFIED
+certificateId,studentName,college,course,issueDate,status
+SKRPISC62704001,Yalavarthi Haindavi,"Madanapalle Institute of Technology and Science Deemed to be University","MTech - Computer Science and Engineering",14-08-2026,VALID
+SKRPISC62704002,Gowrigari Sreevani,"Madanapalle Institute of Technology and Science Deemed to be University","MTech - Computer Science and Engineering",14-08-2026,VALID
+SKRPISC62704003,Betharasi Ushapriya,"Madanapalle Institute of Technology and Science Deemed to be University","MTech - Computer Science and Engineering",14-08-2026,VALID

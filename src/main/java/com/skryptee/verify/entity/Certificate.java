@@ -15,13 +15,9 @@ public class Certificate {
 
     private String studentName;
 
-    private String registerNumber;
-
     private String college;
 
     private String course;
-
-    private Integer score;
 
     private LocalDate issueDate;
 

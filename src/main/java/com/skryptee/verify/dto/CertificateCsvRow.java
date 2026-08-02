@@ -2,14 +2,20 @@ package com.skryptee.verify.dto;
 
 public class CertificateCsvRow {
 
+    private String certificateId;
     private String studentName;
-    private String registerNumber;
     private String college;
     private String course;
-    private Integer score;
     private String issueDate;
-    private String certificateId;
     private String status;
+
+    public String getCertificateId() {
+        return certificateId;
+    }
+
+    public void setCertificateId(String certificateId) {
+        this.certificateId = certificateId;
+    }
 
     public String getStudentName() {
         return studentName;
@@ -17,14 +23,6 @@ public class CertificateCsvRow {
 
     public void setStudentName(String studentName) {
         this.studentName = studentName;
-    }
-
-    public String getRegisterNumber() {
-        return registerNumber;
-    }
-
-    public void setRegisterNumber(String registerNumber) {
-        this.registerNumber = registerNumber;
     }
 
     public String getCollege() {
@@ -43,28 +41,12 @@ public class CertificateCsvRow {
         this.course = course;
     }
 
-    public Integer getScore() {
-        return score;
-    }
-
-    public void setScore(Integer score) {
-        this.score = score;
-    }
-
     public String getIssueDate() {
         return issueDate;
     }
 
     public void setIssueDate(String issueDate) {
         this.issueDate = issueDate;
-    }
-
-    public String getCertificateId() {
-        return certificateId;
-    }
-
-    public void setCertificateId(String certificateId) {
-        this.certificateId = certificateId;
     }
 
     public String getStatus() {

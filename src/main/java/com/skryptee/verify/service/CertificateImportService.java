@@ -44,10 +44,8 @@ public class CertificateImportService {
 
             certificate.setCertificateId(row.getCertificateId());
             certificate.setStudentName(row.getStudentName());
-            certificate.setRegisterNumber(row.getRegisterNumber());
             certificate.setCollege(row.getCollege());
             certificate.setCourse(row.getCourse());
-            certificate.setScore(row.getScore());
 
             certificate.setIssueDate(
                     LocalDate.parse(row.getIssueDate(), DATE_FORMATTER)

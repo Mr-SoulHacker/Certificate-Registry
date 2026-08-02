@@ -63,38 +63,29 @@
         <div class="hero">
 
             <div class="verify-circle">
-
                 ✓
-
             </div>
 
             <div class="verified-text">
-
                 VERIFIED
-
             </div>
 
             <h1>
-
                 Certificate Successfully Verified
-
             </h1>
 
             <p>
-
                 This certificate has been successfully validated against the
                 official Skryptee Digital Certificate Registry.
-
                 The credential is authentic and currently active.
-
             </p>
 
         </div>
+
         <!-- DETAILS -->
+
         <div class="section-title">
-
             Certificate Details
-
         </div>
 
         <div class="details">
@@ -102,14 +93,11 @@
             <div class="detail-row">
 
                 <div class="label">
-
-                    Student Name
-
+                    Certificate Holder
                 </div>
 
                 <div class="value"
                      th:text="${certificate.studentName}">
-
                 </div>
 
             </div>
@@ -117,29 +105,11 @@
             <div class="detail-row">
 
                 <div class="label">
-
-                    Register Number
-
-                </div>
-
-                <div class="value"
-                     th:text="${certificate.registerNumber}">
-
-                </div>
-
-            </div>
-
-            <div class="detail-row">
-
-                <div class="label">
-
                     College
-
                 </div>
 
                 <div class="value"
                      th:text="${certificate.college}">
-
                 </div>
 
             </div>
@@ -147,14 +117,11 @@
             <div class="detail-row">
 
                 <div class="label">
-
                     Course
-
                 </div>
 
                 <div class="value"
                      th:text="${certificate.course}">
-
                 </div>
 
             </div>
@@ -162,29 +129,23 @@
             <div class="detail-row">
 
                 <div class="label">
-
-                    Score
-
-                </div>
-
-                <div class="value"
-                     th:text="${certificate.score + '%'}">
-
-                </div>
-
-            </div>
-
-            <div class="detail-row">
-
-                <div class="label">
-
                     Issue Date
-
                 </div>
 
                 <div class="value"
-                     th:text="${certificate.issueDate}">
+                     th:text="${#temporals.format(certificate.issueDate, 'dd MMM yyyy')}">
+                </div>
 
+            </div>
+
+            <div class="detail-row">
+
+                <div class="label">
+                    Status
+                </div>
+
+                <div class="value"
+                     th:text="${certificate.status}">
                 </div>
 
             </div>
@@ -196,22 +157,17 @@
         <div class="certificate-box">
 
             <div class="certificate-title">
-
                 Certificate Identifier
-
             </div>
 
             <div class="certificate-row">
 
                 <div class="certificate-id"
                      th:text="${certificate.certificateId}">
-
                 </div>
 
                 <button class="copy-btn">
-
                     Copy
-
                 </button>
 
             </div>
@@ -223,34 +179,26 @@
         <div class="trust-box">
 
             <div class="trust-icon">
-
                 ✓
-
             </div>
 
             <div>
 
                 <h3>
-
                     Official Registry Verification
-
                 </h3>
 
                 <p>
-
                     This certificate is present in the
                     Skryptee Digital Certificate Registry.
-
                 </p>
 
                 <div class="verification-status">
 
                     Status
 
-                    <strong>
-
-                        Active
-
+                    <strong th:text="${certificate.status}">
+                        VALID
                     </strong>
 
                 </div>
@@ -265,12 +213,10 @@
 
             <div>
 
-                Issued & Verified by
+                Issued &amp; Verified by
 
                 <strong>
-
                     Skryptee Digital Certificate Registry
-
                 </strong>
 
             </div>
@@ -284,6 +230,10 @@
             </div>
 
         </div>
+
+    </div>
+
+</div>
 
 </body>
 
